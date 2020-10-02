@@ -1,0 +1,128 @@
+app.js
+import ‘react-native-gesture-handler';
+import { NavigationContainer } from ‘@react-navigation/native’;
+
+app.js
+import Cadastro from ‘./Cadastro';
+import Cadastro from './Cadastro';
+
+SignIn/index.js
+import React from “react";
+import { View, Text, StyleSheet, Button } from “react-native";
+export default Cadastro = ({ navigation }) =>
+{
+  return
+  (
+    <Button title="Criar Conta" onPress={() => navigation.push("CriarConta")} />
+  )
+}
+
+CriarConta/index.js
+import React from “react";
+import { View, Text, StyleSheet, Button } from “react-native";
+export default Cadastro = ({ navigation }) =>
+{
+  return
+   (
+    <View>
+      <Text>Inicio</Text>
+    </View>
+   )
+}
+
+app.js
+import { createBottomTabNavigator} from ‘@react-navigation/bottom-tabs’;
+const Tabs = createBottomTabNavigator();
+
+<Tabs.Navigator>
+<Tabs.Screen name="Inicio" component={Inicio} />
+<Tabs.Screen name="Perfil" component={Perfil} />
+</Tabs.Navigator>
+
+Inicio/index.js
+import React from “react";
+import { View, Text, StyleSheet, Button } from “react-native";
+export default Inicio = ({ navigation }) =>
+{
+  return
+    (
+      <View>
+      <Text>Inicio</Text>
+      </View>
+    )
+}
+
+Perfil/index.js
+import React from “react";
+import { View, Text, StyleSheet, Button } from “react-native";
+export default Perfil = ({ navigation }) =>
+{
+  return
+  (
+    <View>
+    <Text>Perfil</Text>
+    </View>
+   )
+}
+
+<Tabs.Navigator>
+<Tabs.Screen name="Inicio" component={InicioStackScreen} />
+<Tabs.Screen name="Perfil" component={PerfilStackScreen} />
+</Tabs.Navigator>
+
+const InicioStack = createStackNavigator();
+const InicioStackScreen = () =>
+(
+  <InicioStack.Navigator>
+  <InicioStack.Screen name="Inicio" component={Inicio} />
+  <InicioStack.Screen name="Sobre" component={Sobre} />
+  </InicioStack.Navigator>
+)
+
+const PerfilStack = createStackNavigator();
+const PerfilStackScreen = () =>
+(
+  <PerfilStack.Navigator>
+  <PerfilStack.Screen name="Perfil" component={Perfil} />
+  </PerfilStack.Navigator>
+)
+
+import React from “react";
+import { View, Text, StyleSheet, Button } from “react-native";
+export default Sobre = ({ navigation }) =>
+{
+  return
+  (
+    <View>
+    <Text>Sobre</Text>
+    </View>
+  )
+}
+
+import React from “react";
+import { View, Text, StyleSheet, Button } from “react-native";
+export default Inicio = ({ navigation }) =>
+{
+  return
+  (
+    <View>
+    <Text>Inicio</Text>
+    <Button title="Sobre" onPress={() =>navigation.push('Sobre')} />
+    </View>
+)
+}
+
+//app.js
+import { createDrawerNavigator } from ‘@react-navigation/drawer’;
+const Drawer = createDrawerNavigator();
+<Drawer.Navigator>
+<Drawer.Screen name="Inicio" component={TabsScreen} />
+<Drawer.Screen name="Perfil" component={PerfilStackScreen} />
+</Drawer.Navigator>
+
+const TabsScreen = () => (
+<Tabs.Navigator>
+<Tabs.Screen name="Inicio" component={InicioStackScreen} />
+<Tabs.Screen name="Perfil" component={PerfilStackScreen} />
+</Tabs.Navigator>
+)
