@@ -1,5 +1,5 @@
-expo init ChatGrupou;
-cd ChatGrupou;
+expo init AppGrupou;
+cd AppGrupou;
 expo start;
 
 import {StatusBar} from 'expo-status-bar';
@@ -11,7 +11,7 @@ export default function App()
   return
  (
     <View style=[styles.container]>
-     <Text>Chat Grupou!</Text>
+     <Text>App Grupou!</Text>
      <StatusBar style="auto"/>
     </View>
   );
